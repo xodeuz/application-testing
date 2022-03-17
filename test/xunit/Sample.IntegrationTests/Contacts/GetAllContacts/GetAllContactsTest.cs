@@ -1,16 +1,16 @@
 ﻿using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Sample.Domain.Contacts;
-using Sample.IntegrationTests.Configuration;
-using Sample.IntegrationTests.Contacts.Seeds;
-using Sample.IntegrationTests.Extensions;
+using Sample.XUnit.IntegrationTests.Configuration;
+using Sample.XUnit.IntegrationTests.Contacts.Seeds;
+using Sample.XUnit.IntegrationTests.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Sample.IntegrationTests.Contacts
+namespace Sample.XUnit.IntegrationTests.Contacts
 {
     public class GetAllContactsTest : IDisposable
     {

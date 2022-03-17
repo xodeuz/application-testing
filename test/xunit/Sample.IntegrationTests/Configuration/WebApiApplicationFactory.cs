@@ -6,7 +6,7 @@ using Sample.Infrastructure.Persistence.Context;
 using System;
 using System.Linq;
 
-namespace Sample.IntegrationTests.Configuration
+namespace Sample.XUnit.IntegrationTests.Configuration
 {
     internal class WebApiApplicationFactory<TSeed> : WebApplicationFactory<Program> where TSeed : class, IDatabaseSeed
     {

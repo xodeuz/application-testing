@@ -4,7 +4,7 @@ using Sample.Domain.Contacts;
 using System;
 using Xunit;
 
-namespace Sample.Domain.UnitTests
+namespace Sample.Domain.XUnit.UnitTests
 {
     public class ContactTest
     {

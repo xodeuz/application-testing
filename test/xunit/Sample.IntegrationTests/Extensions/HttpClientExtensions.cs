@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Sample.IntegrationTests.Extensions
+namespace Sample.XUnit.IntegrationTests.Extensions
 {
     /// <summary>
     ///     Helper extensions to get both status code and convert response to contract

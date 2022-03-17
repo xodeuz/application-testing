@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sample.IntegrationTests.Configuration
+namespace Sample.XUnit.IntegrationTests.Configuration
 {
     /// <summary>
     ///     Abstraction for custom database seeding

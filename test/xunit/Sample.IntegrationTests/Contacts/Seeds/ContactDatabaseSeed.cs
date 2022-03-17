@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Sample.Domain.Contacts;
 using Sample.Infrastructure.Persistence.Context;
-using Sample.IntegrationTests.Configuration;
+using Sample.XUnit.IntegrationTests.Configuration;
 using System;
 
-namespace Sample.IntegrationTests.Contacts.Seeds
+namespace Sample.XUnit.IntegrationTests.Contacts.Seeds
 {
     internal class ContactDatabaseSeed : IDatabaseSeed
     {
