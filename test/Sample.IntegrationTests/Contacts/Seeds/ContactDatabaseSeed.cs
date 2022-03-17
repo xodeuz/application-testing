@@ -13,7 +13,7 @@ namespace Sample.IntegrationTests.Contacts.Seeds
             using var scope = services.CreateScope();
             var databaseContext = scope.ServiceProvider.GetRequiredService<ISampleDbContext>();
 
-            databaseContext.Contacts.Add(Contact.New("Chris P. Bacon", "test@test.com", "070100100"));
+            databaseContext.Contacts.Add(Contact.New("Chris P. Bacon", "test@test.com", "0734100100"));
             databaseContext.SaveChangesAsync().Wait();
         }
     }

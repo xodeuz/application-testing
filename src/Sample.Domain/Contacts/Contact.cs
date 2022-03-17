@@ -1,9 +1,10 @@
 ﻿using System.Net.Mail;
 using System.Text.RegularExpressions;
+using Sample.Domain.SeedWork;
 
 namespace Sample.Domain.Contacts
 {
-    public class Contact
+    public class Contact : TimeTrackableEntity
     {
         private const int MAX_NAME_LENGTH = 300;
         private const string PHONE_NUMBER_EXPRESSION = @"^((((0{2}?)|(\+){1})46)|0)7[\d]{8}";
@@ -12,7 +13,7 @@ namespace Sample.Domain.Contacts
         public string? Email { get; private set; }
         public string? PhoneNumber { get; private set; }
 
-        public Contact(Guid id, string name, string email, string phoneNumber)
+        public Contact(Guid id, string name, string? email = null, string? phoneNumber = null)
         {
             Id = id;
             Name = name;
@@ -61,7 +62,10 @@ namespace Sample.Domain.Contacts
 
         public static Contact New(string name, string? email, string? phoneNumber)
         {
-            return new Contact(Guid.NewGuid(), name, email, phoneNumber);
+            var contact = new Contact(Guid.NewGuid(), name, null, null);
+            contact.ChangePhoneNumber(phoneNumber);
+            contact.ChangeEmailAddress(email);
+            return contact;
         }
     }
 }

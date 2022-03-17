@@ -33,7 +33,7 @@ namespace Sample.IntegrationTests.Contacts
             using var client = testHost.CreateClient();
 
             // Act
-            var (Contract, StatusCode)= await client.GetContractAsync<IEnumerable<ContactDto>>("contact");
+            var (Contract, StatusCode) = await client.GetContractAsync<IEnumerable<ContactDto>>("contact");
 
             // Assert
             StatusCode.Should().Be(HttpStatusCode.OK);
